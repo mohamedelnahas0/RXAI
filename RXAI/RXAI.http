@@ -1,0 +1,6 @@
+@RXAI_HostAddress = http://localhost:5012
+
+GET {{RXAI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

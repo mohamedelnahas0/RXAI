@@ -1,0 +1,700 @@
+[
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "AddActiveIngredientWithVariants",
+    "RelativePath": "api/ActiveIngredients/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "GetActiveIngredientBases",
+    "RelativePath": "api/ActiveIngredients/bases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientBaseDTO, RXAI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "CreateActiveIngredientBase",
+    "RelativePath": "api/ActiveIngredients/bases",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientBaseDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientBaseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "GetActiveIngredientBase",
+    "RelativePath": "api/ActiveIngredients/bases/{drugBankID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drugBankID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientBaseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "UpdateActiveIngredientBase",
+    "RelativePath": "api/ActiveIngredients/bases/{IngredientName}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IngredientName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BUpdateActiveIngredientBaseDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "DeleteActiveIngredientBase",
+    "RelativePath": "api/ActiveIngredients/bases/{IngredientName}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IngredientName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "GetActiveIngredientBaseByName",
+    "RelativePath": "api/ActiveIngredients/bases/name/{ingredientName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingredientName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientBaseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "UpdateVariant",
+    "RelativePath": "api/ActiveIngredients/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BUpdateVariantDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "GetActiveIngredientVariants",
+    "RelativePath": "api/ActiveIngredients/variants",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientVariantDTO, RXAI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "CreateActiveIngredientVariant",
+    "RelativePath": "api/ActiveIngredients/variants",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientVariantDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "GetActiveIngredientVariant",
+    "RelativePath": "api/ActiveIngredients/variants/{ingredientName}/{strength}/{strengthUnit}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingredientName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "strength",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "strengthUnit",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientVariantDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "DeleteActiveIngredientVariant",
+    "RelativePath": "api/ActiveIngredients/variants/{ingredientName}/{strength}/{strengthUnit}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingredientName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "strength",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "strengthUnit",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "GetVariantsByBase",
+    "RelativePath": "api/ActiveIngredients/variants/by-base/{ingredientName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingredientName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientVariantDTO, RXAI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "GetVariantsByDisease",
+    "RelativePath": "api/ActiveIngredients/variants/by-disease/{icdCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "icdCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RXAI.Controllers.ActiveIngredientsController\u002BActiveIngredientVariantDTO, RXAI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PatientController",
+    "Method": "GetPatients",
+    "RelativePath": "api/Patient",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RXAI.Dtos.PT.PatientDTO, RXAI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PatientController",
+    "Method": "CreatePatient",
+    "RelativePath": "api/Patient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientDto",
+        "Type": "RXAI.Dtos.PT.PatientDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PatientController",
+    "Method": "GetPatient",
+    "RelativePath": "api/Patient/{phoneNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RXAI.Dtos.PT.PatientDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PatientController",
+    "Method": "DeletePatient",
+    "RelativePath": "api/Patient/delete/{phoneNumber}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PatientController",
+    "Method": "GetPatientPrescriptions",
+    "RelativePath": "api/Patient/patient-prescriptions/{phoneNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PatientController",
+    "Method": "UpdatePatient",
+    "RelativePath": "api/Patient/update/{phoneNumber}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "patientDto",
+        "Type": "RXAI.Dtos.PT.updatepatientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PrescriptionController",
+    "Method": "AddAndDispense",
+    "RelativePath": "api/Prescription/add-and-dispense",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IngredientName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dose",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "form",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "strength",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "strengthUnit",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "prescriptionDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dispensedMedication",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PrescriptionController",
+    "Method": "GetAllPrescriptions",
+    "RelativePath": "api/Prescription/all-prescriptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.PrescriptionController",
+    "Method": "GetPrescriptionsByDateRange",
+    "RelativePath": "api/Prescription/prescriptions-by-date",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "AddTradeName",
+    "RelativePath": "api/TradeName",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tradeNameDto",
+        "Type": "RXAI.Dtos.TR.TradeNameDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "GetTradeNamesByAtc",
+    "RelativePath": "api/TradeName/{atcCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atcCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "GetTradeName",
+    "RelativePath": "api/TradeName/{atcCode}/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atcCode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "UpdateTradeName",
+    "RelativePath": "api/TradeName/{atcCode}/{name}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atcCode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tradeNameDto",
+        "Type": "RXAI.Dtos.TR.UpdateTradeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "DeleteTradeName",
+    "RelativePath": "api/TradeName/{atcCode}/{name}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atcCode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "GetTradeNamesByActiveIngredient",
+    "RelativePath": "api/TradeName/by-active/{activeIngredient}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activeIngredient",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "GetTradeNamesByDrugBankId",
+    "RelativePath": "api/TradeName/id/{drugBankId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drugBankId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "SearchTradeNames",
+    "RelativePath": "api/TradeName/search/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RXAI.WeatherForecast, RXAI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
