@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RXAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3c94956e390111408731fd7a785efd331dcd2de")]
 [assembly: System.Reflection.AssemblyProductAttribute("RXAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RXAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

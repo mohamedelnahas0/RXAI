@@ -145,3 +145,4 @@ C:\Users\xxx68\source\repos\RXAI\RXAI\obj\Debug\net8.0\refint\RXAI.dll
 C:\Users\xxx68\source\repos\RXAI\RXAI\obj\Debug\net8.0\RXAI.pdb
 C:\Users\xxx68\source\repos\RXAI\RXAI\obj\Debug\net8.0\RXAI.genruntimeconfig.cache
 C:\Users\xxx68\source\repos\RXAI\RXAI\obj\Debug\net8.0\ref\RXAI.dll
+C:\Users\xxx68\source\repos\RXAI\RXAI\obj\Debug\net8.0\RXAI.sourcelink.json

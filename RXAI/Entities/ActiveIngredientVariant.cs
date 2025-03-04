@@ -25,11 +25,7 @@ namespace RXAI.Entities
         public virtual ActiveIngredientBase BaseIngredient { get; set; }
 
 
-        [StringLength(20)]
-        public string ICDCode { get; set; }
-
-        [ForeignKey("ICDCode")]
-        public virtual Disease Disease { get; set; }
+   
         [JsonIgnore]
         public virtual ICollection<TradeName> Trades { get; set; }
         public virtual ICollection<Prescription> Prescriptions { get; set; }

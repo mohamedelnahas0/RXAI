@@ -561,6 +561,323 @@
         }
       }
     },
+    "/api/Disease": {
+      "get": {
+        "tags": [
+          "Disease"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Disease"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiseaseDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiseaseDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiseaseDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Disease/{id}": {
+      "get": {
+        "tags": [
+          "Disease"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Disease"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDiseaseDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDiseaseDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDiseaseDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Disease"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Disease/by-name/{name}": {
+      "get": {
+        "tags": [
+          "Disease"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiseaseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Disease/by-active-ingredient/{ingredientName}": {
+      "get": {
+        "tags": [
+          "Disease"
+        ],
+        "parameters": [
+          {
+            "name": "ingredientName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Disease/by-active-ingredient-id/{drugBankId}": {
+      "get": {
+        "tags": [
+          "Disease"
+        ],
+        "parameters": [
+          {
+            "name": "drugBankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DiseaseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Patient": {
       "get": {
         "tags": [
@@ -1148,6 +1465,10 @@
           "ingredientName": {
             "type": "string",
             "nullable": true
+          },
+          "diseaseName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1166,10 +1487,6 @@
           "strengthUnit": {
             "type": "string",
             "nullable": true
-          },
-          "icdCode": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1182,6 +1499,10 @@
             "nullable": true
           },
           "ingredientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "diseaseName": {
             "type": "string",
             "nullable": true
           },
@@ -1213,14 +1534,6 @@
           "ingredientName": {
             "type": "string",
             "nullable": true
-          },
-          "icdCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "diseaseName": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1233,6 +1546,16 @@
             "nullable": true
           },
           "strengthUnit": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DiseaseDto": {
+        "type": "object",
+        "properties": {
+          "icdCode": {
             "type": "string",
             "nullable": true
           },
@@ -1305,6 +1628,16 @@
         "type": "object",
         "properties": {
           "ingredientName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateDiseaseDto": {
+        "type": "object",
+        "properties": {
+          "diseaseName": {
             "type": "string",
             "nullable": true
           }

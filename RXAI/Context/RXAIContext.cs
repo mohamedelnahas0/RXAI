@@ -41,9 +41,9 @@ namespace RXAI.Context
                 .WithMany(b => b.Variants)
                 .HasForeignKey(a => a.DrugBankID);
 
-            modelBuilder.Entity<ActiveIngredientVariant>()
+            modelBuilder.Entity<ActiveIngredientBase>()
                 .HasOne(a => a.Disease)
-                .WithMany(d => d.ActiveIngredientVariants)
+                .WithMany(d => d.ActiveIngredientBase)
                 .HasForeignKey(a => a.ICDCode);
 
             modelBuilder.Entity<TradeName>()

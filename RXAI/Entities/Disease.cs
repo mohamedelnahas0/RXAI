@@ -12,6 +12,6 @@ namespace RXAI.Entities
         [StringLength(100)]
         public string DiseaseName { get; set; }
 
-        public virtual ICollection<ActiveIngredientVariant> ActiveIngredientVariants { get; set; }
+        public virtual ICollection<ActiveIngredientBase> ActiveIngredientBase { get; set; }
     }
 }
