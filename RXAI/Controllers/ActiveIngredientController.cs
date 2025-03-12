@@ -69,8 +69,8 @@ namespace RXAI.Controllers
 
         public class UpdateVariantDto
         {
-            
-            public string ActiveIngredientName { get; set; }       
+
+            public string ActiveIngredientName { get; set; }
             public string NewStrength { get; set; }
             public string NewStrengthUnit { get; set; }
         }
@@ -102,7 +102,7 @@ namespace RXAI.Controllers
             {
                 DrugBankID = ingredient.DrugBankID,
                 IngredientName = ingredient.IngredientName,
-                DiseaseName = ingredient.Disease.DiseaseName 
+                DiseaseName = ingredient.Disease.DiseaseName
             };
         }
 
@@ -148,7 +148,7 @@ namespace RXAI.Controllers
             {
                 DrugBankID = dto.DrugBankID,
                 IngredientName = dto.IngredientName,
-                ICDCode = disease.ICDCode // نستخدم ICDCode المستخرج من اسم المرض
+                ICDCode = disease.ICDCode
             };
 
             _context.ActiveIngredientBases.Add(ingredient);

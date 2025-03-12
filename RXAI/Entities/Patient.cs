@@ -17,7 +17,6 @@ namespace RXAI.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime RegistrationDate { get; set; } = DateTime.Now;
 
-        // Navigation Properties
         public virtual ICollection<Prescription> Prescriptions { get; set; }
     }
 }

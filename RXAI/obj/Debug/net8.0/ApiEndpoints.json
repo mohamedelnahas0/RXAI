@@ -749,38 +749,12 @@
   },
   {
     "ContainingType": "RXAI.Controllers.TradeNameController",
-    "Method": "GetTradeName",
-    "RelativePath": "api/TradeName/{atcCode}/{name}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "atcCode",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RXAI.Controllers.TradeNameController",
     "Method": "UpdateTradeName",
-    "RelativePath": "api/TradeName/{atcCode}/{name}",
+    "RelativePath": "api/TradeName/{name}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "atcCode",
-        "Type": "System.String",
-        "IsRequired": true
-      },
       {
         "Name": "name",
         "Type": "System.String",
@@ -797,16 +771,11 @@
   {
     "ContainingType": "RXAI.Controllers.TradeNameController",
     "Method": "DeleteTradeName",
-    "RelativePath": "api/TradeName/{atcCode}/{name}",
+    "RelativePath": "api/TradeName/{name}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "atcCode",
-        "Type": "System.String",
-        "IsRequired": true
-      },
       {
         "Name": "name",
         "Type": "System.String",
@@ -833,6 +802,48 @@
   },
   {
     "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "GetTradeNamesByActiveIngredient",
+    "RelativePath": "api/TradeName/by-activeDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activeIngredient",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "strength",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "strengthUnit",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "GetTradeNameBySku",
+    "RelativePath": "api/TradeName/by-sku/{skuCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skuCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
     "Method": "GetTradeNamesByDrugBankId",
     "RelativePath": "api/TradeName/id/{drugBankId}",
     "HttpMethod": "GET",
@@ -843,6 +854,27 @@
         "Name": "drugBankId",
         "Type": "System.String",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.TradeNameController",
+    "Method": "GetTradeNames",
+    "RelativePath": "api/TradeName/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

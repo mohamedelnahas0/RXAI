@@ -12,7 +12,6 @@ namespace RXAI.Entities
         [StringLength(100)]
         public string Name { get; set; }
 
-        // المفتاح الخارجي للمتغير المحدد
         [StringLength(20)]
         public string DrugBankID { get; set; }
         [StringLength(4)]
@@ -20,11 +19,9 @@ namespace RXAI.Entities
         [StringLength(20)]
         public string StrengthUnit { get; set; }
 
-        // علاقة المفتاح الخارجي مع جدول متغيرات المكون الفعال
         [ForeignKey("DrugBankID, Strength, StrengthUnit")]
         public virtual ActiveIngredientVariant ActiveIngredientVariant { get; set; }
 
-        // حقل إضافي للمرجعية فقط
         [StringLength(100)]
         public string IngredientName { get; set; }
 

@@ -21,49 +21,57 @@ namespace RXAI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddTradeName([FromBody] TradeNameDto tradeNameDto)
         {
-            var activeIngredient = await _context.ActiveIngredientVariants
-                .Include(a => a.BaseIngredient) 
-                .FirstOrDefaultAsync(ai =>
-                    ai.DrugBankID == tradeNameDto.DrugBankID &&
-                    ai.Strength == tradeNameDto.Strength &&
-                    ai.StrengthUnit == tradeNameDto.StrengtUnit);
+            var activeIngredientBase = await _context.ActiveIngredientBases
+                .FirstOrDefaultAsync(ai => ai.IngredientName == tradeNameDto.IngredientName);
 
-            if (activeIngredient == null)
-                return NotFound("The active ingredient in this strength and unity does not exist..");
+            if (activeIngredientBase == null)
+                return NotFound("The active ingredient does not exist.");
+
+            var activeIngredientVariant = await _context.ActiveIngredientVariants
+                .Include(a => a.BaseIngredient)
+                .FirstOrDefaultAsync(ai =>
+                    ai.DrugBankID == activeIngredientBase.DrugBankID &&
+                    ai.Strength == tradeNameDto.Strength &&
+                    ai.StrengthUnit == tradeNameDto.StrengthUnit);
+
+            if (activeIngredientVariant == null)
+                return NotFound("The active ingredient in this strength and unit does not exist.");
 
             var exists = await _context.TradeNames
                 .AnyAsync(t => t.SKUCode == tradeNameDto.Skucode && t.Name == tradeNameDto.Name);
 
             if (exists)
-                return Conflict("This brand name with the same ATC code already exists..");
+                return Conflict("This brand name with the same SKU code already exists.");
 
             var tradeName = new TradeName
             {
                 SKUCode = tradeNameDto.Skucode,
                 Name = tradeNameDto.Name,
-                DrugBankID = tradeNameDto.DrugBankID,
+                DrugBankID = activeIngredientBase.DrugBankID, // استخدام DrugBankID المستخرج
                 PharmaceuticalForm = tradeNameDto.PharmaceuticalForm,
                 Price = tradeNameDto.Price,
                 QuantityStock = tradeNameDto.QuantityStock,
                 ManufactureCountry = tradeNameDto.ManufactureCountry,
-                IngredientName = activeIngredient.BaseIngredient.IngredientName,
+                IngredientName = activeIngredientBase.IngredientName,
                 Strength = tradeNameDto.Strength,
-                StrengthUnit = tradeNameDto.StrengtUnit
+                StrengthUnit = tradeNameDto.StrengthUnit
             };
 
+            // إضافة التريد نيم إلى قاعدة البيانات
             _context.TradeNames.Add(tradeName);
             await _context.SaveChangesAsync();
 
+            // إرجاع النتيجة
             return Ok(tradeName);
         }
 
-        [HttpGet("{atcCode}/{name}")]
-        public async Task<IActionResult> GetTradeName(string atcCode, string name)
-        {
-            var tradeName = await _context.TradeNames.FirstOrDefaultAsync(t => t.SKUCode == atcCode && t.Name == name);
-            if (tradeName == null) return NotFound("Trade name not found.");
-            return Ok(tradeName);
-        }
+        //[HttpGet("{Tradename}")]
+        //public async Task<IActionResult> GetTradeName( string name)
+        //{
+        //    var tradeName = await _context.TradeNames.FirstOrDefaultAsync(t => t.Name == name);
+        //    if (tradeName == null) return NotFound("Trade name not found.");
+        //    return Ok(tradeName);
+        //}
 
 
         [HttpGet("{atcCode}")]
@@ -99,19 +107,50 @@ namespace RXAI.Controllers
         }
 
 
+
         [HttpGet("by-active/{activeIngredient}")]
         public async Task<IActionResult> GetTradeNamesByActiveIngredient(string activeIngredient)
         {
             var tradeNames = await _context.TradeNames
-                .Where(t => t.ActiveIngredientVariant.DrugBankID.Contains(activeIngredient))
+                .Where(t => t.ActiveIngredientVariant.BaseIngredient.IngredientName.Contains(activeIngredient))
                 .ToListAsync();
             return Ok(tradeNames);
         }
 
-        [HttpPut("{atcCode}/{name}")]
-        public async Task<IActionResult> UpdateTradeName(string atcCode, string name, [FromBody] UpdateTradeDto tradeNameDto)
+
+        [HttpGet("by-activeDetails")]
+        public async Task<IActionResult> GetTradeNamesByActiveIngredient(
+    string activeIngredient, // اسم المادة الفعالة
+    [FromQuery] string strength = null, // القوة (اختياري)
+    [FromQuery] string strengthUnit = null) // وحدة القوة (اختياري)
         {
-            var tradeName = await _context.TradeNames.FirstOrDefaultAsync(t => t.SKUCode == atcCode && t.Name == name);
+            // بناء الاستعلام الأساسي
+            var query = _context.TradeNames
+                .Where(t => t.ActiveIngredientVariant.BaseIngredient.IngredientName.Contains(activeIngredient));
+
+            // إضافة شروط إضافية إذا تم تقديم Strength و StrengthUnit
+            if (!string.IsNullOrEmpty(strength))
+            {
+                query = query.Where(t => t.ActiveIngredientVariant.Strength == strength);
+            }
+
+            if (!string.IsNullOrEmpty(strengthUnit))
+            {
+                query = query.Where(t => t.ActiveIngredientVariant.StrengthUnit == strengthUnit);
+            }
+
+            // تنفيذ الاستعلام وإرجاع النتيجة
+            var tradeNames = await query.ToListAsync();
+
+            if (!tradeNames.Any())
+                return NotFound("No trade names found for the specified criteria.");
+
+            return Ok(tradeNames);
+        }
+        [HttpPut("{name}")]
+        public async Task<IActionResult> UpdateTradeName(string name, [FromBody] UpdateTradeDto tradeNameDto)
+        {
+            var tradeName = await _context.TradeNames.FirstOrDefaultAsync(t => t.Name == name);
             if (tradeName == null) return NotFound("Trade name not found.");
 
             //if (tradeNameDto.AtcCode != null && tradeNameDto.AtcCode != atcCode)
@@ -131,15 +170,74 @@ namespace RXAI.Controllers
 
 
 
-        [HttpDelete("{atcCode}/{name}")]
-        public async Task<IActionResult> DeleteTradeName(string atcCode, string name)
+        [HttpDelete("{name}")]
+        public async Task<IActionResult> DeleteTradeName(string name)
         {
-            var tradeName = await _context.TradeNames.FirstOrDefaultAsync(t => t.SKUCode == atcCode && t.Name == name);
+            var tradeName = await _context.TradeNames.FirstOrDefaultAsync(t => t.Name == name);
             if (tradeName == null) return NotFound();
 
             _context.TradeNames.Remove(tradeName);
             await _context.SaveChangesAsync();
             return Ok();
+        }
+
+        [HttpGet("by-sku/{skuCode}")]
+        public async Task<IActionResult> GetTradeNameBySku(string skuCode)
+        {
+            // البحث عن التريد نيم باستخدام SKUCode
+            var tradeName = await _context.TradeNames
+                .FirstOrDefaultAsync(t => t.SKUCode == skuCode);
+
+            if (tradeName == null)
+                return NotFound("Trade name not found.");
+
+            return Ok(tradeName);
+        }
+
+        [HttpGet("list")]
+        public async Task<IActionResult> GetTradeNames(
+    [FromQuery] string sortBy = "name", // القيمة الافتراضية: الفرز بالاسم
+    [FromQuery] string sortOrder = "asc") // القيمة الافتراضية: تصاعدي (asc)
+        {
+            // جلب جميع الأدوية من قاعدة البيانات
+            var query = _context.TradeNames.AsQueryable();
+
+            // تطبيق الفرز حسب المعلمة المحددة
+            switch (sortBy.ToLower())
+            {
+                case "price":
+                    query = sortOrder.ToLower() == "desc"
+                        ? query.OrderByDescending(t => t.Price)
+                        : query.OrderBy(t => t.Price);
+                    break;
+
+                case "name":
+                default:
+                    query = sortOrder.ToLower() == "desc"
+                        ? query.OrderByDescending(t => t.Name)
+                        : query.OrderBy(t => t.Name);
+                    break;
+            }
+
+            // تحويل النتيجة إلى DTO
+            var tradeNames = await query
+                .Select(t => new TradeNameListDto
+                {
+                    Name = t.Name,
+                    Price = t.Price,
+                    PharmaceuticalForm = t.PharmaceuticalForm,
+                    ManufactureCountry = t.ManufactureCountry
+                })
+                .ToListAsync();
+
+            return Ok(tradeNames);
+        }
+        public class TradeNameListDto
+        {
+            public string Name { get; set; } // اسم الدواء
+            public decimal? Price { get; set; } // السعر
+            public string PharmaceuticalForm { get; set; } // الفورم
+            public string ManufactureCountry { get; set; } // دولة التصنيع
         }
 
 

@@ -28,7 +28,6 @@ namespace RXAI.Entities
             [ForeignKey("DrugBankID, Strength, StrengthUnit")]
             public virtual ActiveIngredientVariant ActiveIngredientVariant { get; set; }
 
-            // حقل إضافي للمرجعية فقط
             [StringLength(100)]
             public string IngredientName { get; set; }
 

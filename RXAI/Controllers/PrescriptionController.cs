@@ -47,7 +47,7 @@ namespace RXAI.Controllers
 
             var activeIngredient = await _context.ActiveIngredientVariants
                 .Include(a => a.BaseIngredient)
-                .Include(a => a.Trades) 
+                .Include(a => a.Trades)
                 .FirstOrDefaultAsync(a =>
                     a.BaseIngredient.IngredientName == IngredientName &&
                     a.Strength == strength &&
@@ -101,7 +101,7 @@ namespace RXAI.Controllers
                 QuantityDispensed = quantity,
                 PhoneNumber = phoneNumber,
                 IngredientName = activeIngredient.BaseIngredient?.IngredientName,
-                DrugBankID = activeIngredient.BaseIngredient?.DrugBankID 
+                DrugBankID = activeIngredient.BaseIngredient?.DrugBankID
             };
 
             _context.Prescriptions.Add(prescription);
