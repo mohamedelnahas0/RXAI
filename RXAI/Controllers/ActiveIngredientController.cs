@@ -19,7 +19,6 @@ namespace RXAI.Controllers
             _context = context;
         }
 
-        // DTOs
         public class ActiveIngredientBaseDTO
         {
             public string DrugBankID { get; set; }
@@ -74,18 +73,38 @@ namespace RXAI.Controllers
             public string NewStrength { get; set; }
             public string NewStrengthUnit { get; set; }
         }
-        // Methods
+        public class UpdateActiveIngredientDTO
+        {
+            public string ActiveIngredientName { get; set; }
+    
+        }
+
+        [HttpPut("update/{id}")]
+        public async Task<IActionResult> UpdateActiveIngredient(string id, [FromBody] UpdateActiveIngredientDTO dto)
+        {
+            var ingredient = await _context.ActiveIngredientBases
+                .FirstOrDefaultAsync(ai => ai.DrugBankID == id);
+
+            if (ingredient == null) return NotFound("Active Ingredient Not Found");
+
+            ingredient.IngredientName = dto.ActiveIngredientName;
+
+            await _context.SaveChangesAsync();
+
+            return Ok("Active Ingredient Updated Successfully");
+        }
+
 
         [HttpGet("bases")]
         public async Task<ActionResult<IEnumerable<ActiveIngredientBaseDTO>>> GetActiveIngredientBases()
         {
             return await _context.ActiveIngredientBases
-                .Include(ai => ai.Disease) // Include Disease
+                .Include(ai => ai.Disease) 
                 .Select(ai => new ActiveIngredientBaseDTO
                 {
                     DrugBankID = ai.DrugBankID,
                     IngredientName = ai.IngredientName,
-                    DiseaseName = ai.Disease.DiseaseName // استخدام اسم المرض بدلاً من ICDCode
+                    DiseaseName = ai.Disease.DiseaseName 
                 }).ToListAsync();
         }
 
@@ -93,7 +112,7 @@ namespace RXAI.Controllers
         public async Task<ActionResult<ActiveIngredientBaseDTO>> GetActiveIngredientBase(string drugBankID)
         {
             var ingredient = await _context.ActiveIngredientBases
-                .Include(ai => ai.Disease) // Include Disease
+                .Include(ai => ai.Disease) 
                 .FirstOrDefaultAsync(ai => ai.DrugBankID == drugBankID);
 
             if (ingredient == null) return NotFound("Active Ingredient Doesn't Exist");
@@ -110,7 +129,7 @@ namespace RXAI.Controllers
         public async Task<ActionResult<ActiveIngredientBaseDTO>> GetActiveIngredientBaseByName(string ingredientName)
         {
             var ingredient = await _context.ActiveIngredientBases
-                .Include(ai => ai.Disease) // Include Disease
+                .Include(ai => ai.Disease)
                 .FirstOrDefaultAsync(ai => ai.IngredientName == ingredientName);
 
             if (ingredient == null) return NotFound("Active Ingredient Doesn't Exist");
@@ -119,7 +138,7 @@ namespace RXAI.Controllers
             {
                 DrugBankID = ingredient.DrugBankID,
                 IngredientName = ingredient.IngredientName,
-                DiseaseName = ingredient.Disease.DiseaseName // استخدام اسم المرض بدلاً من ICDCode
+                DiseaseName = ingredient.Disease.DiseaseName 
             };
         }
 
@@ -134,7 +153,6 @@ namespace RXAI.Controllers
                 return BadRequest($"This ID ({dto.DrugBankID}) already exists.");
             }
 
-            // البحث عن المرض باستخدام اسم المرض (DiseaseName)
             var disease = await _context.Diseases
                 .FirstOrDefaultAsync(d => d.DiseaseName == dto.DiseaseName);
 
@@ -143,7 +161,6 @@ namespace RXAI.Controllers
                 return BadRequest($"Disease with name '{dto.DiseaseName}' not found.");
             }
 
-            // إنشاء العنصر الفعال الأساسي
             var ingredient = new ActiveIngredientBase
             {
                 DrugBankID = dto.DrugBankID,
@@ -177,6 +194,20 @@ namespace RXAI.Controllers
         {
             var ingredient = await _context.ActiveIngredientBases
                 .FirstOrDefaultAsync(ai => ai.IngredientName == IngredientName);
+
+            if (ingredient == null) return NotFound("Active Ingredient Doesn't Exist");
+
+            _context.ActiveIngredientBases.Remove(ingredient);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("bases/id/{drugBankID}")]
+        public async Task<IActionResult> DeleteActiveIngredientBaseByDrugBankID(string drugBankID)
+        {
+            var ingredient = await _context.ActiveIngredientBases
+                .FirstOrDefaultAsync(ai => ai.DrugBankID == drugBankID);
 
             if (ingredient == null) return NotFound("Active Ingredient Doesn't Exist");
 
@@ -227,7 +258,6 @@ namespace RXAI.Controllers
         [HttpPost("variants")]
         public async Task<ActionResult<ActiveIngredientVariantDTO>> CreateActiveIngredientVariant(ActiveIngredientCreateDTO dto)
         {
-            // البحث عن المادة الفعالة (ActiveIngredientBase) باستخدام الاسم
             var baseIngredient = await _context.ActiveIngredientBases
                 .FirstOrDefaultAsync(b => b.IngredientName == dto.IngredientName);
 
@@ -236,7 +266,6 @@ namespace RXAI.Controllers
                 return BadRequest("Base Ingredient Doesn't Exist");
             }
 
-            // التحقق من عدم وجود تكرار للفارينت
             var duplicateVariant = await _context.ActiveIngredientVariants.AnyAsync(v =>
                 v.DrugBankID == baseIngredient.DrugBankID &&
                 v.Strength == dto.Strength &&
@@ -247,7 +276,6 @@ namespace RXAI.Controllers
                 return BadRequest("Variant Already Exists");
             }
 
-            // إنشاء الفارينت الجديد
             var variant = new ActiveIngredientVariant
             {
                 DrugBankID = baseIngredient.DrugBankID, // الربط بالمادة الفعالة
@@ -255,11 +283,9 @@ namespace RXAI.Controllers
                 StrengthUnit = dto.StrengthUnit
             };
 
-            // إضافة الفارينت إلى قاعدة البيانات
             _context.ActiveIngredientVariants.Add(variant);
             await _context.SaveChangesAsync();
 
-            // إرجاع النتيجة
             return CreatedAtAction(
                 nameof(GetActiveIngredientVariant),
                 new
@@ -345,11 +371,9 @@ namespace RXAI.Controllers
         {
             try
             {
-                // التحقق من صحة البيانات المدخلة
                 if (dto == null || string.IsNullOrEmpty(dto.DrugBankID) || string.IsNullOrEmpty(dto.IngredientName))
                     return BadRequest(new { message = "Active ingredient data is incomplete." });
 
-                // البحث عن المرض باستخدام اسم المرض (DiseaseName)
                 var disease = await _context.Diseases
                     .FirstOrDefaultAsync(d => d.DiseaseName == dto.DiseaseName);
 
@@ -358,14 +382,12 @@ namespace RXAI.Controllers
                     return BadRequest(new { message = $"Disease with name '{dto.DiseaseName}' not found." });
                 }
 
-                // البحث عن المادة الفعالة (ActiveIngredientBase) باستخدام DrugBankID
                 var existingBase = await _context.ActiveIngredientBases
                     .Include(b => b.Variants)
                     .FirstOrDefaultAsync(b => b.DrugBankID == dto.DrugBankID);
 
                 if (existingBase != null)
                 {
-                    // التحقق من أن اسم المادة الفعالة متطابق
                     if (existingBase.IngredientName != dto.IngredientName)
                     {
                         return BadRequest(new { message = "Conflict: DrugBankID is already associated with a different ingredient name." });
@@ -373,34 +395,29 @@ namespace RXAI.Controllers
                 }
                 else
                 {
-                    // إنشاء مادة فعالة جديدة
                     existingBase = new ActiveIngredientBase
                     {
                         DrugBankID = dto.DrugBankID,
                         IngredientName = dto.IngredientName,
-                        ICDCode = disease.ICDCode, // الربط بالمرض باستخدام ICDCode
+                        ICDCode = disease.ICDCode, 
                         Variants = new List<ActiveIngredientVariant>()
                     };
 
                     _context.ActiveIngredientBases.Add(existingBase);
                 }
 
-                // معالجة الفاريانت
                 foreach (var variantDto in dto.Variants)
                 {
-                    // التحقق من أن كل فارينت يحتوي على قوة ووحدة قوة
                     if (string.IsNullOrEmpty(variantDto.Strength) || string.IsNullOrEmpty(variantDto.StrengthUnit))
                     {
                         return BadRequest(new { message = "Each variant must have a strength and strength unit." });
                     }
 
-                    // التحقق من عدم وجود تكرار للفارينت
                     bool variantExists = existingBase.Variants.Any(v =>
                         v.Strength == variantDto.Strength && v.StrengthUnit == variantDto.StrengthUnit);
 
                     if (!variantExists)
                     {
-                        // إنشاء فارينت جديد
                         var newVariant = new ActiveIngredientVariant
                         {
                             DrugBankID = existingBase.DrugBankID,
@@ -416,15 +433,12 @@ namespace RXAI.Controllers
                     }
                 }
 
-                // حفظ التغييرات في قاعدة البيانات
                 await _context.SaveChangesAsync();
 
-                // إرجاع رسالة نجاح
                 return Ok(new { message = "Active ingredient and variants added successfully." });
             }
             catch (Exception ex)
             {
-                // معالجة الأخطاء
                 return StatusCode(500, new { message = "An error occurred while processing your request.", error = ex.Message });
             }
         }
@@ -439,7 +453,6 @@ namespace RXAI.Controllers
                     return BadRequest(new { message = "Incomplete update data." });
                 }
 
-                // Find the base ingredient
                 var existingBase = await _context.ActiveIngredientBases
                     .Include(b => b.Variants)
                     .FirstOrDefaultAsync(b => b.IngredientName == dto.ActiveIngredientName);
@@ -449,7 +462,6 @@ namespace RXAI.Controllers
                     return NotFound(new { message = "Active ingredient not found." });
                 }
 
-                // Update all variants
                 foreach (var variant in existingBase.Variants)
                 {
                     variant.Strength = dto.NewStrength;

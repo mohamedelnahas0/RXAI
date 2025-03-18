@@ -21,7 +21,6 @@ namespace RXAI.Controllers
             _context = context;
         }
 
-        // DTOs
         public class DiseaseDto
         {
             public string ICDCode { get; set; }
@@ -33,11 +32,8 @@ namespace RXAI.Controllers
             public string DiseaseName { get; set; }
         }
 
-        // Methods
 
-        /// <summary>
-        /// Retrieve all diseases.
-        /// </summary>
+      
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DiseaseDto>>> GetDiseases()
         {
@@ -46,9 +42,7 @@ namespace RXAI.Controllers
                 .ToListAsync();
         }
 
-        /// <summary>
-        /// Retrieve a specific disease by ICDCode.
-        /// </summary>
+      
         /// <param name="id">The ICDCode of the disease.</param>
         [HttpGet("{id}")]
         public async Task<ActionResult<DiseaseDto>> GetDisease(string id)
@@ -58,9 +52,7 @@ namespace RXAI.Controllers
             return new DiseaseDto { ICDCode = disease.ICDCode, DiseaseName = disease.DiseaseName };
         }
 
-        /// <summary>
-        /// Retrieve a specific disease by name.
-        /// </summary>
+     
         /// <param name="name">The name of the disease.</param>
         [HttpGet("by-name/{name}")]
         public async Task<ActionResult<DiseaseDto>> GetDiseaseByName(string name)
@@ -72,9 +64,7 @@ namespace RXAI.Controllers
             return new DiseaseDto { ICDCode = disease.ICDCode, DiseaseName = disease.DiseaseName };
         }
 
-        /// <summary>
-        /// Create a new disease.
-        /// </summary>
+       
         /// <param name="dto">The disease data.</param>
         [HttpPost]
         public async Task<ActionResult<DiseaseDto>> CreateDisease(DiseaseDto dto)
@@ -90,9 +80,7 @@ namespace RXAI.Controllers
             return CreatedAtAction(nameof(GetDisease), new { id = disease.ICDCode }, dto);
         }
 
-        /// <summary>
-        /// Update an existing disease.
-        /// </summary>
+     
         /// <param name="id">The ICDCode of the disease to update.</param>
         /// <param name="dto">The updated disease data.</param>
         [HttpPut("{id}")]
@@ -111,9 +99,7 @@ namespace RXAI.Controllers
             return NoContent();
         }
 
-        /// <summary>
-        /// Delete a disease.
-        /// </summary>
+      
         /// <param name="id">The ICDCode of the disease to delete.</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDisease(string id)
@@ -127,9 +113,7 @@ namespace RXAI.Controllers
             return NoContent();
         }
 
-        /// <summary>
-        /// Retrieve diseases associated with a specific active ingredient by name.
-        /// </summary>
+     
         /// <param name="ingredientName">The name of the active ingredient.</param>
         [HttpGet("by-active-ingredient/{ingredientName}")]
         public async Task<ActionResult<IEnumerable<DiseaseDto>>> GetDiseasesByActiveIngredient(string ingredientName)
@@ -145,9 +129,7 @@ namespace RXAI.Controllers
             return diseases;
         }
 
-        /// <summary>
-        /// Retrieve diseases associated with a specific active ingredient by DrugBankID.
-        /// </summary>
+       
         /// <param name="drugBankId">The DrugBankID of the active ingredient.</param>
         [HttpGet("by-active-ingredient-id/{drugBankId}")]
         public async Task<ActionResult<IEnumerable<DiseaseDto>>> GetDiseasesByActiveIngredientId(string drugBankId)

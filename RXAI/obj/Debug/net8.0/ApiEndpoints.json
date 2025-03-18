@@ -126,6 +126,22 @@
   },
   {
     "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "DeleteActiveIngredientBaseByDrugBankID",
+    "RelativePath": "api/ActiveIngredients/bases/id/{drugBankID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drugBankID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
     "Method": "GetActiveIngredientBaseByName",
     "RelativePath": "api/ActiveIngredients/bases/name/{ingredientName}",
     "HttpMethod": "GET",
@@ -161,6 +177,27 @@
       {
         "Name": "dto",
         "Type": "RXAI.Controllers.ActiveIngredientsController\u002BUpdateVariantDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RXAI.Controllers.ActiveIngredientsController",
+    "Method": "UpdateActiveIngredient",
+    "RelativePath": "api/ActiveIngredients/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "RXAI.Controllers.ActiveIngredientsController\u002BUpdateActiveIngredientDTO",
         "IsRequired": true
       }
     ],

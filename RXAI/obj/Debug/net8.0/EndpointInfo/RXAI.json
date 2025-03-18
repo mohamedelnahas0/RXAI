@@ -5,6 +5,47 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/ActiveIngredients/update/{id}": {
+      "put": {
+        "tags": [
+          "ActiveIngredients"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateActiveIngredientDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateActiveIngredientDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateActiveIngredientDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/ActiveIngredients/bases": {
       "get": {
         "tags": [
@@ -214,6 +255,28 @@
         "parameters": [
           {
             "name": "IngredientName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ActiveIngredients/bases/id/{drugBankID}": {
+      "delete": {
+        "tags": [
+          "ActiveIngredients"
+        ],
+        "parameters": [
+          {
+            "name": "drugBankID",
             "in": "path",
             "required": true,
             "schema": {
@@ -1671,6 +1734,16 @@
         "type": "object",
         "properties": {
           "ingredientName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateActiveIngredientDTO": {
+        "type": "object",
+        "properties": {
+          "activeIngredientName": {
             "type": "string",
             "nullable": true
           }

@@ -47,7 +47,7 @@ namespace RXAI.Controllers
             {
                 SKUCode = tradeNameDto.Skucode,
                 Name = tradeNameDto.Name,
-                DrugBankID = activeIngredientBase.DrugBankID, // استخدام DrugBankID المستخرج
+                DrugBankID = activeIngredientBase.DrugBankID, 
                 PharmaceuticalForm = tradeNameDto.PharmaceuticalForm,
                 Price = tradeNameDto.Price,
                 QuantityStock = tradeNameDto.QuantityStock,
@@ -57,11 +57,9 @@ namespace RXAI.Controllers
                 StrengthUnit = tradeNameDto.StrengthUnit
             };
 
-            // إضافة التريد نيم إلى قاعدة البيانات
             _context.TradeNames.Add(tradeName);
             await _context.SaveChangesAsync();
 
-            // إرجاع النتيجة
             return Ok(tradeName);
         }
 
@@ -120,15 +118,14 @@ namespace RXAI.Controllers
 
         [HttpGet("by-activeDetails")]
         public async Task<IActionResult> GetTradeNamesByActiveIngredient(
-    string activeIngredient, // اسم المادة الفعالة
-    [FromQuery] string strength = null, // القوة (اختياري)
-    [FromQuery] string strengthUnit = null) // وحدة القوة (اختياري)
+    string activeIngredient, 
+    [FromQuery] string strength = null,
+    [FromQuery] string strengthUnit = null) 
         {
             // بناء الاستعلام الأساسي
             var query = _context.TradeNames
                 .Where(t => t.ActiveIngredientVariant.BaseIngredient.IngredientName.Contains(activeIngredient));
 
-            // إضافة شروط إضافية إذا تم تقديم Strength و StrengthUnit
             if (!string.IsNullOrEmpty(strength))
             {
                 query = query.Where(t => t.ActiveIngredientVariant.Strength == strength);
@@ -139,7 +136,6 @@ namespace RXAI.Controllers
                 query = query.Where(t => t.ActiveIngredientVariant.StrengthUnit == strengthUnit);
             }
 
-            // تنفيذ الاستعلام وإرجاع النتيجة
             var tradeNames = await query.ToListAsync();
 
             if (!tradeNames.Any())
@@ -153,11 +149,7 @@ namespace RXAI.Controllers
             var tradeName = await _context.TradeNames.FirstOrDefaultAsync(t => t.Name == name);
             if (tradeName == null) return NotFound("Trade name not found.");
 
-            //if (tradeNameDto.AtcCode != null && tradeNameDto.AtcCode != atcCode)
-            //    return BadRequest("AtcCode cannot be modified.");
-
-            //if (tradeNameDto.Name != null && tradeNameDto.Name != name)
-            //    return BadRequest("Trade name cannot be modified.");
+           
             tradeName.Name = tradeNameDto.Name;
             tradeName.PharmaceuticalForm = tradeNameDto.PharmaceuticalForm;
             tradeName.Price = tradeNameDto.Price;
@@ -184,7 +176,6 @@ namespace RXAI.Controllers
         [HttpGet("by-sku/{skuCode}")]
         public async Task<IActionResult> GetTradeNameBySku(string skuCode)
         {
-            // البحث عن التريد نيم باستخدام SKUCode
             var tradeName = await _context.TradeNames
                 .FirstOrDefaultAsync(t => t.SKUCode == skuCode);
 
@@ -196,13 +187,11 @@ namespace RXAI.Controllers
 
         [HttpGet("list")]
         public async Task<IActionResult> GetTradeNames(
-    [FromQuery] string sortBy = "name", // القيمة الافتراضية: الفرز بالاسم
-    [FromQuery] string sortOrder = "asc") // القيمة الافتراضية: تصاعدي (asc)
+    [FromQuery] string sortBy = "name", 
+    [FromQuery] string sortOrder = "asc") 
         {
-            // جلب جميع الأدوية من قاعدة البيانات
             var query = _context.TradeNames.AsQueryable();
 
-            // تطبيق الفرز حسب المعلمة المحددة
             switch (sortBy.ToLower())
             {
                 case "price":
@@ -219,7 +208,6 @@ namespace RXAI.Controllers
                     break;
             }
 
-            // تحويل النتيجة إلى DTO
             var tradeNames = await query
                 .Select(t => new TradeNameListDto
                 {
@@ -234,10 +222,10 @@ namespace RXAI.Controllers
         }
         public class TradeNameListDto
         {
-            public string Name { get; set; } // اسم الدواء
-            public decimal? Price { get; set; } // السعر
-            public string PharmaceuticalForm { get; set; } // الفورم
-            public string ManufactureCountry { get; set; } // دولة التصنيع
+            public string Name { get; set; } 
+            public decimal? Price { get; set; }
+            public string PharmaceuticalForm { get; set; } 
+            public string ManufactureCountry { get; set; } 
         }
 
 

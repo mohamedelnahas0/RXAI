@@ -86,7 +86,6 @@ namespace RXAI.Controllers
                 return BadRequest(new { Message = "This prescription already exists." });
             }
 
-            // تقليل الكمية من المخزون
             trade.QuantityStock -= quantity;
 
             var prescription = new Prescription

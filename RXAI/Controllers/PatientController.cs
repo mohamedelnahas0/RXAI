@@ -33,7 +33,6 @@ namespace RXAI.Controllers
             return Ok(patients);
         }
 
-        // ✅ Get Patient By PhoneNumber
         [HttpGet("{phoneNumber}")]
         public async Task<ActionResult<PatientDTO>> GetPatient(string phoneNumber)
         {
@@ -54,7 +53,6 @@ namespace RXAI.Controllers
             return Ok(patient);
         }
 
-        // ✅ Add New Patient
         [HttpPost]
         public async Task<ActionResult> CreatePatient([FromBody] PatientDTO patientDto)
         {

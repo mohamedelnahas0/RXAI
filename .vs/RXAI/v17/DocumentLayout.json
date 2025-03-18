@@ -3,64 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\xxx68\\source\\repos\\RXAI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\tradename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\tradename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\context\\rxaicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\context\\rxaicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\tradenamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\tradenamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\diseasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\diseasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\activeingredientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\activeingredientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\dtos\\tr\\tradenamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\dtos\\tr\\tradenamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\dtos\\tr\\updatetradedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\dtos\\tr\\updatetradedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\activeingredientvariant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\activeingredientvariant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\activeingredientbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\activeingredientbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\activeingredientvariant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\activeingredientvariant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\tradenamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\tradenamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\context\\rxaicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\context\\rxaicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\tradename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\tradename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\dtos\\diseasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\dtos\\diseasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\dtos\\tr\\updatetradedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\dtos\\tr\\updatetradedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\dtos\\tr\\tradenamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\dtos\\tr\\tradenamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\dtos\\pt\\updatepatientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\dtos\\pt\\updatepatientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\dtos\\pt\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\dtos\\pt\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\dtos\\pr\\prescriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\dtos\\pr\\prescriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\controllers\\diseasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\controllers\\diseasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|solutionrelative:rxai\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC18CFD6-96A1-4216-B80C-E77267DAF746}|RXAI\\RXAI.csproj|c:\\users\\xxx68\\source\\repos\\rxai\\rxai\\migrations\\20250304211754_addsiease.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,80 +110,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Patient.cs",
-              "RelativeDocumentMoniker": "RXAI\\Entities\\Patient.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Patient.cs",
-              "RelativeToolTip": "RXAI\\Entities\\Patient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "PrescriptionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\Pr\\PrescriptionDTO.cs",
+              "RelativeDocumentMoniker": "RXAI\\Dtos\\Pr\\PrescriptionDTO.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\Pr\\PrescriptionDTO.cs",
+              "RelativeToolTip": "RXAI\\Dtos\\Pr\\PrescriptionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T02:46:16.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:36:43.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Prescription.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Prescription.cs",
-              "RelativeDocumentMoniker": "RXAI\\Entities\\Prescription.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Prescription.cs",
-              "RelativeToolTip": "RXAI\\Entities\\Prescription.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "TradeNameController.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\TradeNameController.cs",
+              "RelativeDocumentMoniker": "RXAI\\Controllers\\TradeNameController.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\TradeNameController.cs",
+              "RelativeToolTip": "RXAI\\Controllers\\TradeNameController.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAA+wMoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T02:46:10.241Z"
+              "WhenOpened": "2025-03-07T16:58:41.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PatientController.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\PatientController.cs",
-              "RelativeDocumentMoniker": "RXAI\\Controllers\\PatientController.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\PatientController.cs",
-              "RelativeToolTip": "RXAI\\Controllers\\PatientController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T02:24:07.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "PrescriptionController.cs",
               "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\PrescriptionController.cs",
               "RelativeDocumentMoniker": "RXAI\\Controllers\\PrescriptionController.cs",
               "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\PrescriptionController.cs",
               "RelativeToolTip": "RXAI\\Controllers\\PrescriptionController.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAA5wOgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAA4wFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T20:59:17.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "RXAI\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "RXAI\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAA5wCAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T02:24:16.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Program.cs",
               "RelativeDocumentMoniker": "RXAI\\Program.cs",
               "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Program.cs",
               "RelativeToolTip": "RXAI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T02:24:37.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "TradeName.cs",
               "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\TradeName.cs",
               "RelativeDocumentMoniker": "RXAI\\Entities\\TradeName.cs",
@@ -179,51 +170,100 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TradeNameController.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\TradeNameController.cs",
-              "RelativeDocumentMoniker": "RXAI\\Controllers\\TradeNameController.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\TradeNameController.cs",
-              "RelativeToolTip": "RXAI\\Controllers\\TradeNameController.cs",
-              "ViewState": "AgIAANgAAAAAAAAAAAA5wPUAAAABAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Patient.cs",
+              "RelativeDocumentMoniker": "RXAI\\Entities\\Patient.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Patient.cs",
+              "RelativeToolTip": "RXAI\\Entities\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T16:58:41.082Z"
+              "WhenOpened": "2025-03-12T02:46:16.029Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RXAIContext.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Context\\RXAIContext.cs",
-              "RelativeDocumentMoniker": "RXAI\\Context\\RXAIContext.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Context\\RXAIContext.cs",
-              "RelativeToolTip": "RXAI\\Context\\RXAIContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ActiveIngredientVariant.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\ActiveIngredientVariant.cs",
+              "RelativeDocumentMoniker": "RXAI\\Entities\\ActiveIngredientVariant.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\ActiveIngredientVariant.cs",
+              "RelativeToolTip": "RXAI\\Entities\\ActiveIngredientVariant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T20:51:23.057Z"
+              "WhenOpened": "2025-03-02T13:06:07.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DiseaseController.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\DiseaseController.cs",
-              "RelativeDocumentMoniker": "RXAI\\Controllers\\DiseaseController.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\DiseaseController.cs",
-              "RelativeToolTip": "RXAI\\Controllers\\DiseaseController.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAA5wKUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T20:45:39.817Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "ActiveIngredientController.cs",
               "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\ActiveIngredientController.cs",
               "RelativeDocumentMoniker": "RXAI\\Controllers\\ActiveIngredientController.cs",
               "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\ActiveIngredientController.cs",
               "RelativeToolTip": "RXAI\\Controllers\\ActiveIngredientController.cs",
-              "ViewState": "AgIAALUBAAAAAAAAAAA5wNMBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAAM0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T13:04:16.26Z"
+              "WhenOpened": "2025-03-02T13:04:16.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ActiveIngredientBase.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\ActiveIngredientBase.cs",
+              "RelativeDocumentMoniker": "RXAI\\Entities\\ActiveIngredientBase.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\ActiveIngredientBase.cs",
+              "RelativeToolTip": "RXAI\\Entities\\ActiveIngredientBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T13:06:02.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PatientDTO.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\PT\\PatientDTO.cs",
+              "RelativeDocumentMoniker": "RXAI\\Dtos\\PT\\PatientDTO.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\PT\\PatientDTO.cs",
+              "RelativeToolTip": "RXAI\\Dtos\\PT\\PatientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T14:36:45.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "updatepatientDto.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\PT\\updatepatientDto.cs",
+              "RelativeDocumentMoniker": "RXAI\\Dtos\\PT\\updatepatientDto.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\PT\\updatepatientDto.cs",
+              "RelativeToolTip": "RXAI\\Dtos\\PT\\updatepatientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T14:36:45.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RXAIContext.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Context\\RXAIContext.cs",
+              "RelativeDocumentMoniker": "RXAI\\Context\\RXAIContext.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Context\\RXAIContext.cs",
+              "RelativeToolTip": "RXAI\\Context\\RXAIContext.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAowAEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T20:51:23.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateTradeDto.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\TR\\UpdateTradeDto.cs",
+              "RelativeDocumentMoniker": "RXAI\\Dtos\\TR\\UpdateTradeDto.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\TR\\UpdateTradeDto.cs",
+              "RelativeToolTip": "RXAI\\Dtos\\TR\\UpdateTradeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T17:05:49.609Z"
             },
             {
               "$type": "Document",
@@ -239,7 +279,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DiseaseDto.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\DiseaseDto.cs",
+              "RelativeDocumentMoniker": "RXAI\\Dtos\\DiseaseDto.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\DiseaseDto.cs",
+              "RelativeToolTip": "RXAI\\Dtos\\DiseaseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T14:36:51.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "RXAI\\Controllers\\PatientController.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "RXAI\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIBAwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T02:24:07.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DiseaseController.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\DiseaseController.cs",
+              "RelativeDocumentMoniker": "RXAI\\Controllers\\DiseaseController.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\DiseaseController.cs",
+              "RelativeToolTip": "RXAI\\Controllers\\DiseaseController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAA+wBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T20:45:39.817Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "RXAI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "RXAI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAA5wCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T02:24:16.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Prescription.cs",
+              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Prescription.cs",
+              "RelativeDocumentMoniker": "RXAI\\Entities\\Prescription.cs",
+              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Prescription.cs",
+              "RelativeToolTip": "RXAI\\Entities\\Prescription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T02:46:10.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "20250304211754_AddSiease.cs",
               "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Migrations\\20250304211754_AddSiease.cs",
               "RelativeDocumentMoniker": "RXAI\\Migrations\\20250304211754_AddSiease.cs",
@@ -251,43 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UpdateTradeDto.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\TR\\UpdateTradeDto.cs",
-              "RelativeDocumentMoniker": "RXAI\\Dtos\\TR\\UpdateTradeDto.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Dtos\\TR\\UpdateTradeDto.cs",
-              "RelativeToolTip": "RXAI\\Dtos\\TR\\UpdateTradeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T17:05:49.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ActiveIngredientBase.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\ActiveIngredientBase.cs",
-              "RelativeDocumentMoniker": "RXAI\\Entities\\ActiveIngredientBase.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\ActiveIngredientBase.cs",
-              "RelativeToolTip": "RXAI\\Entities\\ActiveIngredientBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T13:06:02.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ActiveIngredientVariant.cs",
-              "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\ActiveIngredientVariant.cs",
-              "RelativeDocumentMoniker": "RXAI\\Entities\\ActiveIngredientVariant.cs",
-              "ToolTip": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\ActiveIngredientVariant.cs",
-              "RelativeToolTip": "RXAI\\Entities\\ActiveIngredientVariant.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowAcAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T13:06:07.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Disease.cs",
               "DocumentMoniker": "C:\\Users\\xxx68\\source\\repos\\RXAI\\RXAI\\Entities\\Disease.cs",
               "RelativeDocumentMoniker": "RXAI\\Entities\\Disease.cs",
